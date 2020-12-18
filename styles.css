@@ -88,6 +88,7 @@ body, .quote-input{
     font-weight: bold;
     color: white;
     position: absolute;
+    outline: none;
     top: 2%;
     right: 2%;
     padding: .7rem 1.5rem;
