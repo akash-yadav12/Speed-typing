@@ -8,43 +8,68 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #1e0555;
+    background-color: #333;
+    transition: all .4s linear;
+}
+
+body.light{
+    background-color: #a29226;
 }
 body, .quote-input{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container{
-    background-color: #f0c04f;
+    background-color: #a29226;
     padding: 1rem;
     border-radius: .5rem;
     width: 700px;
     max-width: 90%;
+    transition: all .4s linear;
+}
+.light .container{
+    background-color: #333;
 }
 .timer{
     position: absolute;
     top: 2rem;
     font-size: 3rem;
-    color: #f0c04f;
-    font-weight: bold;
+    color: #a29226;
+    font-weight: bolder;
+    transition: all .4s linear;
+}
+.light .timer{
+    color: #333;
 }
 .quote-display{
     margin-bottom: 1rem;
+    font-weight: bolder;
+    color: black;
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
+    transition: all .4s linear;
 }
-
+.light .quote-display{
+    color: white;
+}
 .quote-input{
     background-color: transparent;
-    border: 2px solid #a29226;
+    border: 2px solid #333;
     outline: none;
     width: 100%;
     height: 8rem;
     margin: auto;
+    color: #333;
+    font-weight: bolder;
     resize: none;
     padding: .5rem 1rem;
     font-size: 1rem;
     border-radius: .5rem;
+    transition: all .4s linear;
+}
+.light .quote-input{
+    color: white;
+    border-color: #a29226;
 }
 .quote-input:focus{
     border-color:black ;
@@ -55,4 +80,25 @@ body, .quote-input{
 .incorrect{
     color:red;
     text-decoration: underline;
+}
+
+#toggle-btn{
+    background-color: #a29226;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    padding: .7rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+.light #toggle-btn{
+    background-color: #333;
+}
+
+#toggle-btn:hover{
+    background-color: white;
+    color: black;
 }

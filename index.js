@@ -2,11 +2,12 @@ const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
+const toggleBtn = document.querySelector('#toggle-btn')
 
 quoteInputElement.addEventListener('input', ()=>{
     const arrayQuote = quoteDisplayElement.querySelectorAll('span')
     const arrayValue = quoteInputElement.value.split('')
-    const correct = true
+    let correct = true
     arrayQuote.forEach((charSpan,index) =>{
         const char = arrayValue[index]
         if (char == null){
@@ -26,6 +27,10 @@ quoteInputElement.addEventListener('input', ()=>{
     if (correct){
         renderNewQuote()
     }
+})
+
+toggleBtn.addEventListener('click',()=>{
+    document.body.classList.toggle('light')
 })
 
 function getRandomQuote(){
