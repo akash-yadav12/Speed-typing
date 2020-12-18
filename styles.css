@@ -104,3 +104,47 @@ body, .quote-input{
     background-color: white;
     color: black;
 }
+
+.refresh-icon{
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    color: #a29226;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size:30px;
+    transition: all .5s;
+}
+.refresh-icon i{
+    cursor: pointer;
+}
+#text-refresh{
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.light .refresh-icon{
+    color: black;
+}
+
+@keyframes reload{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media all and (max-width:600px){
+    .timer{
+        top: 5.5rem;
+    }
+    .refresh-icon{
+        bottom: 25%;
+    }
+}

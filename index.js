@@ -3,6 +3,14 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
 const toggleBtn = document.querySelector('#toggle-btn')
+const refreshBtn = document.querySelector('#refresh')
+
+refreshBtn.addEventListener('click',()=>{
+    refreshBtn.style.animation = "reload .5s"
+    setTimeout(()=>{
+        location.reload()
+    },500)
+})
 
 quoteInputElement.addEventListener('input', ()=>{
     const arrayQuote = quoteDisplayElement.querySelectorAll('span')
